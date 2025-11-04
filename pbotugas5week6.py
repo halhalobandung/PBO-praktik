@@ -66,4 +66,21 @@ class Nasabah:
 
     def poin(self):
         print(f"Poin Reward Anda: {self._poin_reward} poin")
-        
+
+    def poin_redeem(self, pilihan):
+        list_hadiah = {
+                1: {"nama": "Voucher Belanja Rp50.000", "poin": 100},
+                2: {"nama": "Saldo Rp100.000", "poin": 200},
+                3: {"nama": "Smartwatch BCN Edition", "poin": 500}
+        }
+
+        if pilihan not in list_hadiah:
+            print("Pilihan Anda tidak valid")
+
+        hadiah = list_hadiah[pilihan]
+        poin_dibutuhkan = hadiah["poin"]
+        if self._poin_reward >= poin_dibutuhkan:
+            self._poin_reward -= poin_dibutuhkan
+            print(f"Anda berhasil menukarkan {poin_dibutuhkan} poin denga {hadiah['nama']}!")
+        else:
+            print("Poin Anda Tidak cukup untuk menukarkan hadiah ini.")        
