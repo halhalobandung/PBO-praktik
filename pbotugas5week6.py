@@ -107,17 +107,24 @@ class Nasabah:
         print(f"Poin Akhir : {self.get_poin()}")
         print("="*50)
 
+#SKEANRIO TRANSAKSI 
+
 nasabah1 = Nasabah("Anta Rizqi Maulana", "1234567890", 0)
 
+#MENABUNG 10.000.000
 nasabah1.menabung(10_000_000)
 
+#BELANJA TIGA KALI
 nasabah1.belanja(2_500_000)
 nasabah1.belanja(3_200_000)
 nasabah1.belanja(1_300_000)
 
+#MENABUNG LAGI
 nasabah1.menabung(3_000_000)
 
+#REDEEM POIN
 nasabah1.poin_redeem(200)
 
+#RIWAYAT TRANSAKSI
 nasabah1.tampilkan_info()
 nasabah1.generate_riwayat_transaksi()
